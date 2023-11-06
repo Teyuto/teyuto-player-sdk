@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/gh/Teyuto/teyuto-player-sdk@production/dist/player-sdk.min.js"></script>
+    </head>
+    <body>
+        <div id="target"></div>
+
+        <script>
+            let options = {
+                autoplay: 'on'
+            };
+
+            let player = new TeyutoPlayerSdk("#target", {
+                id: "10912",
+                options: options
+            });
+        </script>
+    </body>
+</html>
