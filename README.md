@@ -1,12 +1,5 @@
 # teyuto-player-sdk
 
----
-title: Video Player SDK
-slug: Q0uq-ht
-createdAt: 2023-09-02T22:40:16.637Z
-updatedAt: 2023-09-24T12:01:07.273Z
----
-
 ## Installation
 
 **1. Simple include in a javascript project**
