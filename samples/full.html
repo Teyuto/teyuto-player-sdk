@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/gh/Teyuto/teyuto-player-sdk@production/dist/player-sdk.min.js"></script>
+    </head>
+
+    <body>
+        <div id="target"></div>
+
+        <!-- buttons that call player methods to control the video playback -->
+        <button onclick="javascript:player.play();">play</button>
+        <button onclick="javascript:player.pause()">pause</button>
+        <button onclick="javascript:player.setVolume(0)">mute</button>
+        <button onclick="javascript:player.setVolume(1)">unmute</button>
+
+        <button onclick="javascript:alert(player.getCurrentTime());">getCurrentTime</button>
+        <button onclick="javascript:alert(player.getVolume());">getVolume</button>
+
+        <button onclick="javascript:player.setCurrentTime(15);">setCurrentTime (15seconds)</button>
+        <button onclick="javascript:player.setVolume(0.5);">setVolume (0.5)</button>
+    </body>
+
+    <script>
+        let options = {
+            autoplay: 'on',
+            muted: 'on',
+            controls: 'on',
+            responsive: 'off',
+            width: 560,
+            height: 300,
+            playbackRates: 'on',
+            qualitySelector: 'on',
+            playerColor: '#dddddd',
+            loop: 'off',
+            captions: 'on'
+        };
+
+        let player = new TeyutoPlayerSdk("#target", {
+            id: "10912",
+            options: options
+        });
+
+        //Events
+        player.on('play', function (e) {
+            // e.detail is the player
+            console.log('play event received', e.detail);
+        });
+        player.on('pause', function (e) {
+            // e.detail is the player
+            console.log('pause event received', e.detail);
+        });
+    </script>
+</html>
