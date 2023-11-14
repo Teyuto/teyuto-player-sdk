@@ -42,6 +42,9 @@ function TeyutoPlayerSdk(posElem, obj) {
 	if (!options.captions) {
 		options.captions = 'on';
 	}
+	if (!options.pip) {
+		options.pip = 'off';
+	}
 
 	let urlIframe = 'https://teyuto.tv/video/player?w=' + idVideo + '&auto=' + options.autoplay + '&muted=' + options.muted + '&controls=' + options.controls + '&playbackRates=' + options.playbackRates + '&qualitySelector=' + options.qualitySelector + '&playerColor=' + options.playerColor + '&loop=' + options.loop + '&captions=' + options.captions;
 
