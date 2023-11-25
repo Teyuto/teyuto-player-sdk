@@ -10,7 +10,7 @@
 
 ```html
 <head>
-  <script src="https://cdn.jsdelivr.net/gh/Teyuto/teyuto-player-sdk@main/dist/player-sdk.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/Teyuto/teyuto-player-sdk@main/src/player-sdk.min.js"></script>
 </head>
 ```
 
@@ -98,7 +98,7 @@ let player = new TeyutoPlayerSdk("#target", {
 ```html
 <html>
   <head>
-    <script src="https://cdn.jsdelivr.net/gh/Teyuto/teyuto-player-sdk@main/dist/player-sdk.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Teyuto/teyuto-player-sdk@main/src/player-sdk.min.js"></script>
   </head>
 
   <body>
