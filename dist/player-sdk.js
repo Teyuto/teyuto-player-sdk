@@ -49,9 +49,9 @@ function TeyutoPlayerSdk(posElem, obj) {
 	let urlIframe = 'https://teyuto.tv/video/player?w=' + idVideo + '&auto=' + options.autoplay + '&muted=' + options.muted + '&controls=' + options.controls + '&playbackRates=' + options.playbackRates + '&qualitySelector=' + options.qualitySelector + '&playerColor=' + options.playerColor + '&loop=' + options.loop + '&captions=' + options.captions;
 
 	if (options.responsive != 'on') {
-		videoframe = '<iframe id="iframePlayerTeyuto-' + uniqueVal + '" width="' + options.width + '" height="' + options.height + '" src="' + urlIframe + '" frameborder="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>';
+		videoframe = '<iframe id="iframePlayerTeyuto-' + uniqueVal + '" width="' + options.width + '" height="' + options.height + '" src="' + urlIframe + '" frameborder="0" allow="autoplay" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>';
 	} else {
-		videoframe = '<div style="position: relative;padding-bottom: 56.25%;height: 0; overflow: hidden;"><iframe id="iframePlayerTeyuto-' + uniqueVal + '" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="' + urlIframe + '" frameborder="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"> </iframe></div>';
+		videoframe = '<div style="position: relative;padding-bottom: 56.25%;height: 0; overflow: hidden;"><iframe id="iframePlayerTeyuto-' + uniqueVal + '" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="' + urlIframe + '" frameborder="0" allow="autoplay" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"> </iframe></div>';
 	}
 
 	elem.innerHTML = elem.innerHTML + videoframe;
@@ -77,7 +77,6 @@ function TeyutoPlayerSdk(posElem, obj) {
 	}, 1000);
 
 	this.play = function (param) {
-		//  console.log("1");
 		iframe.contentWindow.postMessage(
 			{
 				function: "play"
@@ -86,7 +85,6 @@ function TeyutoPlayerSdk(posElem, obj) {
 	}
 
 	this.pause = function (param) {
-		//  console.log("1");
 		iframe.contentWindow.postMessage(
 			{
 				function: "pause"
@@ -99,7 +97,6 @@ function TeyutoPlayerSdk(posElem, obj) {
 	}
 
 	this.setCurrentTime = function (param) {
-		//  console.log("1");
 		iframe.contentWindow.postMessage(
 			{
 				function: "setCurrentTime",
