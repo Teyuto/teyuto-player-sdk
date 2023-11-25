@@ -9,9 +9,9 @@
 **1. Simple include in a javascript project**
 
 ```html
-<head>  ...
-  <script src="https://cdn.jsdelivr.net/gh/Teyuto/teyuto-player-sdk@main/dist/player-sdk.min.js
-"></script></head>
+<head>
+  <script src="https://cdn.jsdelivr.net/gh/Teyuto/teyuto-player-sdk@main/dist/player-sdk.min.js"></script>
+</head>
 ```
 
 **2. Then, create your player using new TeyutoPlayerSdk():**
@@ -98,7 +98,6 @@ let player = new TeyutoPlayerSdk("#target", {
 ```html
 <html>
   <head>
-    ...
     <script src="https://cdn.jsdelivr.net/gh/Teyuto/teyuto-player-sdk@main/dist/player-sdk.min.js"></script>
   </head>
 
@@ -117,7 +116,6 @@ let player = new TeyutoPlayerSdk("#target", {
 
     <button onclick="javascript:player.setCurrentTime(15);">setCurrentTime (15seconds)</button>
     <button onclick="javascript:player.setVolume(0.5);">setVolume (0.5)</button>
-    ...
   </body>
 
   <script>
