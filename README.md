@@ -47,6 +47,7 @@ let player = new TeyutoPlayerSdk("#target", {
 | airPlay         | 'on' , 'off' *String*                             | 'on' *default*                                                            |
 | seekButtons     | 'on' , 'off' *String*                             | 'on'  *default*  
 | lowLatency      | 'on' , 'off' *String*                             | 'off'  *default*  
+| token           |  *String*                                         | ''  *default*  
 
 ## Methods
 
