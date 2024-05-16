@@ -2,9 +2,14 @@ let TeyutoPlayerCurrentTimeValue = 0;
 let TeyutoPlayerCurrentVolumeValue = 0;
 
 function TeyutoPlayerSdk(posElem, obj) {
+	if(!obj.channel){
+		console.error("Missing channel header");
+		return false;
+	}
 	console.log("INIT Teyuto Player SDK");
 	let elem = document.querySelector('' + posElem + '');
         
+    let channel = obj.channel;
     let options = obj.options;
     let idVideo = obj.id;
 	
@@ -55,7 +60,7 @@ function TeyutoPlayerSdk(posElem, obj) {
 		options.token = '';
 	}
 
-	let urlIframe = 'https://teyuto.tv/video/player?w=' + idVideo + '&auto=' + options.autoplay + '&muted=' + options.muted + '&controls=' + options.controls + '&playbackRates=' + options.playbackRates + '&qualitySelector=' + options.qualitySelector + '&playerColor=' + options.playerColor + '&loop=' + options.loop + '&captions=' + options.captions + '&seekButtons=' + options.seekButtons +'&lowLatency=' + options.lowLatency +'&token=' + options.token;
+	let urlIframe = 'https://teyuto.tv/video/player?w=' + idVideo + '&auto=' + options.autoplay + '&muted=' + options.muted + '&controls=' + options.controls + '&playbackRates=' + options.playbackRates + '&qualitySelector=' + options.qualitySelector + '&playerColor=' + options.playerColor + '&loop=' + options.loop + '&captions=' + options.captions + '&seekButtons=' + options.seekButtons +'&lowLatency=' + options.lowLatency +'&cid=' + channel +'&token=' + options.token;
 
 	if (options.responsive != 'on') {
 		videoframe = '<iframe id="iframePlayerTeyuto-' + uniqueVal + '" width="' + options.width + '" height="' + options.height + '" src="' + urlIframe + '" frameborder="0" allow="autoplay" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>';
