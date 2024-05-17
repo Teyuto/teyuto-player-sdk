@@ -14,14 +14,14 @@
 </head>
 ```
 
-**2. Then, create your player using new TeyutoPlayerSdk():**
+**2. Then, create your player using new TeyutoPlayer():**
 
 ```javascript
 let options={
     autoplay:'on'
 };
   
-let player = new TeyutoPlayerSdk("#target", {
+let player = new TeyutoPlayer("#target", {
     id: "<VIDEO_ID>",
     options: options 
 });
@@ -132,7 +132,7 @@ let player = new TeyutoPlayerSdk("#target", {
         captions:'on'
     };
 
-    let player = new TeyutoPlayerSdk("#target", {
+    let player = new TeyutoPlayer("#target", {
         id: "10912",
         options: options 
     });
