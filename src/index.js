@@ -1,7 +1,7 @@
 let TeyutoPlayerCurrentTimeValue = 0;
 let TeyutoPlayerCurrentVolumeValue = 0;
 
-function TeyutoPlayerSdk(posElem, obj) {
+function TeyutoPlayer(posElem, obj) {
 	if(!obj.channel){
 		console.error("Missing channel header");
 		return false;
