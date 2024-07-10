@@ -73,7 +73,7 @@ function TeyutoPlayer(posElem, obj) {
 	}
 
 	var teyutoPlayerDomain = 'https://teyuto.tv';
-	if(option.current_domain){
+	if(option.currentDomain){
 	   teyutoPlayerDomain = '';
 	}
 	let urlIframe = teyutoPlayerDomain + '/video/player?w=' + idVideo +'&cid=' + channel +'&token=' + options.token + '&auto=' + options.autoplay + '&muted=' + options.muted + '&controls=' + options.controls + '&playbackRates=' + options.playbackRates + '&qualitySelector=' + options.qualitySelector + '&playerColor=' + options.playerColor + '&loop=' + options.loop + '&captions=' + options.captions + '&seekButtons=' + options.seekButtons +'&lowLatency=' + options.lowLatency+'+&trimmer=' + options.trimmer+'&related=' + options.related+'&relatedTags=' + options.relatedTags;
