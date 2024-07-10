@@ -178,7 +178,7 @@ function TeyutoPlayer(posElem, obj) {
 			else if (event.type == 'volume') {
 				TeyutoPlayerCurrentVolumeValue = event.value;
 			} else {
-				elem.dispatchEvent(new CustomEvent(event.type, { detail: { idVideo: event.idVideo, data: event.data } }));
+				elem.dispatchEvent(new CustomEvent(event.type, { detail: { idVideo: event.idVideo, type: event.type, values: event.values, data: event.data } }));
 			}
 		} catch (e) {
 
