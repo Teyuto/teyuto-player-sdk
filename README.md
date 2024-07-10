@@ -48,7 +48,8 @@ let player = new TeyutoPlayer("#target", {
 | seekButtons     | 'on' , 'off' *String*                             | 'on'  *default*  
 | lowLatency      | 'on' , 'off' *String*                             | 'off'  *default*
 | related         | 'on' , 'off' *String*                             | 'off'  *default*  
-| relatedTags     | '1,2,3,4,...' *String*                            | ''  *default*  
+| relatedTags     | 'vast or vmap url' *String*                            | ''  *default*  
+| adTag           | '1,2,3,4,...' *String*                            | ''  *default*  
 | token           |  *String*                                         | ''  *default*  
 
 ## Methods
