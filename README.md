@@ -51,6 +51,8 @@ let player = new TeyutoPlayer("#target", {
 | relatedTags     | 'vast or vmap url' *String*                            | ''  *default*  
 | adTag           | '1,2,3,4,...' *String*                            | ''  *default*  
 | token           |  *String*                                         | ''  *default*  
+| bigUnmute       |  'on' , 'off' *String*                            | 'off'  *default vod*  / 'on' *default live*
+
 
 ## Methods
 
