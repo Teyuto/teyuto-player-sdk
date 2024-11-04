@@ -75,7 +75,7 @@ function TeyutoPlayer(posElem, obj) {
 		options.skin = 'teyuto';
 	}
 	if (!options.fullscreenToggle) {
-		options.fullscreenToggle = 'on;
+		options.fullscreenToggle = 'on';
 	}
 	if (!options.token) {
 		options.token = '';
