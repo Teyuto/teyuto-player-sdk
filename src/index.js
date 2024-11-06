@@ -77,6 +77,9 @@ function TeyutoPlayer(posElem, obj) {
 	if (!options.fullscreenToggle) {
 		options.fullscreenToggle = 'on';
 	}
+	if (!options.mobileUi) {
+		options.mobileUi = 'off';
+	}
 	if (!options.token) {
 		options.token = '';
 	}
@@ -85,7 +88,7 @@ function TeyutoPlayer(posElem, obj) {
 	if(options.currentDomain){
 	   teyutoPlayerDomain = '';
 	}
-	let urlIframe = teyutoPlayerDomain + '/video/player?w=' + idVideo +'&cid=' + channel +'&token=' + options.token + '&auto=' + options.autoplay + '&muted=' + options.muted + '&controls=' + options.controls + '&playbackRates=' + options.playbackRates + '&qualitySelector=' + options.qualitySelector + '&playerColor=' + options.playerColor + '&loop=' + options.loop + '&captions=' + options.captions + '&seekButtons=' + options.seekButtons +'&lowLatency=' + options.lowLatency+'&trimmer=' + options.trimmer+'&bigUnmute=' + options.bigUnmute+'&fullscreenToggle=' + options.fullscreenToggle+'&skin=' + options.skin+'&related=' + options.related+'&relatedTags=' + options.relatedTags;
+	let urlIframe = teyutoPlayerDomain + '/video/player?w=' + idVideo +'&cid=' + channel +'&token=' + options.token + '&auto=' + options.autoplay + '&muted=' + options.muted + '&controls=' + options.controls + '&playbackRates=' + options.playbackRates + '&qualitySelector=' + options.qualitySelector + '&playerColor=' + options.playerColor + '&loop=' + options.loop + '&captions=' + options.captions + '&seekButtons=' + options.seekButtons +'&lowLatency=' + options.lowLatency+'&trimmer=' + options.trimmer+'&bigUnmute=' + options.bigUnmute+'&fullscreenToggle=' + options.fullscreenToggle+'&mobileUi=' + options.mobileUi+'&skin=' + options.skin+'&related=' + options.related+'&relatedTags=' + options.relatedTags;
 
 	if (options.responsive != 'on') {
 		videoframe = '<iframe id="iframePlayerTeyuto-' + uniqueVal + '" width="' + options.width + '" height="' + options.height + '" src="' + urlIframe + '" frameborder="0" allow="autoplay" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>';
