@@ -176,6 +176,39 @@ function TeyutoPlayer(posElem, obj) {
 		return TeyutoPlayerCurrentVolumeValue;
 	}
 
+	// Aggiungi questi nuovi metodi alla classe TeyutoPlayer
+    this.setLoop = function(startTime, endTime) {
+	if (typeof startTime !== 'number' || typeof endTime !== 'number') {
+	    console.error('setLoop requires numeric start and end times in seconds');
+	    return;
+	}
+	
+	if (startTime >= endTime) {
+	    console.error('Loop start time must be less than end time');
+	    return;
+	}
+
+	iframe.contentWindow.postMessage(
+	    {
+		function: "setLoop",
+		param: {
+		    start: startTime,
+		    end: endTime
+		}
+	    },
+	    '*'
+	);
+    }
+
+    this.disableLoop = function() {
+	iframe.contentWindow.postMessage(
+	    {
+		function: "disableLoop"
+	    },
+	    '*'
+	);
+    }
+
 	this.on = function (...args) {
 		elem.addEventListener(...args);
 	}
